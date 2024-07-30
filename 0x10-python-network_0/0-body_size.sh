@@ -1,3 +1,3 @@
 #!/bin/bash
-# Takes in a URL, sends request to it while requesting its body-size-response
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+# it gets the content-length of the HTTP response header for a given URL.
+curl -s "$1" | wc -c
